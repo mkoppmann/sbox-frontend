@@ -1,0 +1,29 @@
+<template>
+  <ux-dialog>
+    <ux-dialog-body>
+      <h2>New message</h2>
+
+      <label for="message-recipients" id="message-recipients-label">Recipients *</label>
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" id="message-recipients" placeholder="Search for email address" aria-describedby="message-recipients-label" keyup.trigger="findUserByNameOrEMail()" blur.trigger="fillInMailOfRecipient()" value.bind="searchTerm">
+      </div>
+
+      <label for="message-subject" id="message-subject-label">Subject *</label>
+      <div class="input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+        <input type="text" class="form-control" id="message-subject" aria-describedby="message-subject-label" value.bind="message.subject">
+      </div>
+
+      <label for="message-message" id="message-message-label">Message *</label>
+      <div class="input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+        <textarea rows="8" class="form-control" id="message-message" aria-describedby="message-message-label" value.bind="message.message">
+        </div>
+      </ux-dialog-body>
+      <ux-dialog-footer>
+        <button class="btn btn-default" click.trigger="dialogController.cancel()">Cancel</button>
+        <button class="btn btn-default btn-primary" click.trigger="dialogController.ok(message)">Send</button>
+      </ux-dialog-footer>
+    </ux-dialog>
+  </template>

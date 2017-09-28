@@ -1,0 +1,22 @@
+<template>
+  <h2>Detail View</h2>
+
+  <div class="btn-group" role="group">
+    <button class="btn btn-default" type="button" click.delegate="deleteMessage()"><span class="glyphicon glyphicon-remove"></span></button>
+  </div>
+
+  <article class="email panel panel-default">
+    <p class="email-date">Versendet: ${message.date.toUTCString()}</p>
+    <p class="email-sender">Sender: ${message.sender.name}</p>
+    <p class="email-recipients">Empfänger:
+      <ul>
+        <li repeat.for="recipient of message.recipients">
+          ${recipient.name} (${recipient.email})
+        </li>
+      </ul>
+    </p>
+    <hr>
+    <h3 class="email-subject">${message.subject}</h3>
+    <section class="email-message">${message.message}</section>
+  </article>
+</template>

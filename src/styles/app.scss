@@ -1,0 +1,165 @@
+﻿$brand-font: 'Open Sans Light';
+html,
+body {
+  font-family: 'Noto Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+.container-fluid.login {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  min-height: 100%;
+  background: linear-gradient(135deg, #00405b 0%, #001721 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.content-body {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.content-body.login {
+  margin: 0;
+}
+
+.navbar-brand {
+  font-family: $brand-font;
+  font-size: 150%;
+  img {
+    display: inline-block;
+    margin-right: 0.25em;
+    height: 100%;
+    width: auto;
+  }
+}
+
+.sidebar {
+  background-color: #222;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  bottom: 0;
+  width: 15%;
+  border-right: 1px solid black;
+  .navbar-inverse {
+    border: none;
+  }
+  .navbar-nav {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    border-radius: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+    .navbar-collapse {
+      padding: 0;
+      max-height: none;
+    }
+    ul {
+      float: none;
+      display: block;
+    }
+    li {
+      float: none;
+      display: block;
+    }
+  }
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .sidebar-hidden {
+    display: none;
+  }
+  .sidebar-hidden.sidebar-toggle {
+    color: #9d9d9d;
+    left: 0;
+  }
+  .sidebar {
+    width: 30%;
+    top: 50px;
+    z-index: 42;
+  }
+  .sidebar-toggle {
+    background-color: #000;
+    color: white;
+    position: fixed;
+    display: inline-block;
+    padding: 6px 0;
+    width: 15px;
+    top: 57px;
+    left: 30%;
+    border-radius: 0 4px 4px 0;
+    z-index: 42;
+  }
+}
+
+.form-heading.login {
+  font-family: $brand-font;
+  text-align: center;
+  color: white;
+  img {
+    margin-right: 0.25em;
+  }
+}
+
+form.login {
+  max-width: 400px;
+  padding: 2em;
+  margin: 0 auto;
+  border-radius: 4px;
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-control {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    &:focus {
+      z-index: 2;
+    }
+  }
+  .btn {
+    margin-top: 1em;
+  }
+}
+
+.message-list {
+  margin: 1em auto;
+}
+
+.list-view {
+  .list-group-item-text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.email {
+  margin: 1em auto;
+  padding: 15px;
+  background-color: white;
+}
+
+ux-dialog {
+  margin-top: 100px;
+  min-width: 600px;
+}
+
+ux-dialog-overlay {
+  .active {
+    background-color: black;
+    opacity: 0.5;
+  }
+}
+

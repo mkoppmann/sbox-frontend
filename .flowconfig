@@ -1,0 +1,12 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/npm/node_modules/config-chain/test/.*
+<PROJECT_ROOT>/node_modules/npm/test/fixtures/config/.*
+
+[include]
+
+[libs]
+
+[options]
+esproposal.decorators=ignore
+
+[lints]

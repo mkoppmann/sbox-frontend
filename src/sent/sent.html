@@ -1,0 +1,9 @@
+<template>
+  <require from="../messages/list-view"></require>
+  <require from="../messages/detail-view"></require>
+
+  <div class="message-view">
+    <list-view class="col-md-5 list-view" message.bind="message" view-type.bind="viewType"></list-view>
+    <detail-view class="col-md-7 detail-view" message.bind="message"></detail-view>
+  </div>
+</template>

@@ -1,0 +1,48 @@
+<template>
+
+  <header class="headerbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2 nopadding">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-top">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                  </button>
+              <a class="navbar-brand" href="#">
+                    <img src="./img/sbox-logo.svg" alt="Sbox Logo" width="64px" height="74px"/>
+                    <span>sbox</span>
+                  </a>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="collapse navbar-collapse" id="navbar-top">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a click.delegate="controller.createMessage()"><span class="glyphicon glyphicon-envelope"></span> Create Message</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <ul class="dropdown-menu">
+                    <li><a>User</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <span class="glyphicon glyphicon-user"></span> ${username}<span class="caret"></span>
+                    </a>
+                  <ul class="dropdown-menu">
+                    <li><a click.delegate="navBarLogout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</template>

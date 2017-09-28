@@ -1,0 +1,20 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="bootstrap/css/bootstrap-theme.css"></require>
+  <require from="./styles/app.css"></require>
+  <require from="./nav-bar/nav-bar-top"></require>
+  <require from="./nav-bar/nav-bar-side"></require>
+
+  <nav-bar-top></nav-bar-top>
+
+  <div id="page-wrapper" class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 nopadding">
+        <nav-bar-side router.bind="router"></nav-bar-side>
+      </div>
+      <div class="col-md-10 content-body">
+        <router-view id="content-wrapper"></router-view>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,14 @@
+<template>
+  <button class="btn btn-default sidebar-toggle ${hidden ? 'sidebar-hidden' : ''}" click.delegate="toggleSidebar()">
+        <span id="sidebar-toggle-icon" class="glyphicon ${hidden ? 'glyphicon-menu-right' : 'glyphicon-menu-left'}" aria-hidden="true"></span>
+  </button>
+  <aside class="sidebar ${hidden ? 'sidebar-hidden' : ''}">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+</template>

@@ -1,0 +1,43 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="bootstrap/css/bootstrap-theme.css"></require>
+  <require from="../styles/app.css"></require>
+
+  <div id="page-wrapper" class="container-fluid login">
+    <div class="row">
+      <div id="content-wrapper" class="col-md-12 content-body login">
+        <div class="container">
+          <h1 class="form-heading login">
+            <img src="img/sbox-logo.svg" width="64" height="74" />
+            <span>sbox</span>
+          </h1>
+          <form role="form" id="login-form" name="login-form" class="login" submit.delegate="loginCall()">
+            <div class="alert alert-danger" show.bind="errorLogin" role="alert">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span> Please enter a correct username and password.
+            </div>
+            <div class="form-group">
+              <label for="username" class="sr-only">Email address</label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-envelope"></span>
+                </span>
+                <input id="username" class="form-control" type="text" value.bind="username" placeholder="Username" required autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="sr-only">Password</label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input id="password" class="form-control" type="password" value.bind="password" placeholder="Password" required>
+              </div>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

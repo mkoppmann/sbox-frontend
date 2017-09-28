@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "./node_modules/aurelia-tools/.eslintrc.json",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  }
+}

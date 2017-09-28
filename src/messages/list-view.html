@@ -1,0 +1,15 @@
+<template>
+  <h2>List View</h2>
+
+  <div class="btn-group" role="group">
+    <button class="btn btn-default" type="button" click.delegate="controller.createMessage()"><span class="glyphicon glyphicon-plus"></span></button>
+    <button class="btn btn-default" type="button" click.delegate="reloadMessages()"><span class="glyphicon glyphicon-refresh"></span></button>
+  </div>
+
+  <nav class="message-list list-group">
+    <a repeat.for="message of messages" class="list-group-item ${message.isActive ? 'active' : ''}" href="#" click.delegate="setActive(message)">
+      <h3 class="list-group-item-heading">${message.subject}</h3>
+      <p class="list-group-item-text">${message.message}</p>
+    </a>
+  </nav>
+</template>
